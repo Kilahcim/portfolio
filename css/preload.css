@@ -1,0 +1,120 @@
+body {
+background-color: black;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-square {
+  width: 70px;
+  height: 70px;
+  transform: rotate(45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.small-square {
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  position: absolute;
+}
+
+.one {
+  animation: moveOne 2s infinite;
+    animation-delay: 0.2s;
+    transition-timing-function: cubic-bezier(.24,.96,1,1);
+}
+.two {
+  animation: moveTwo 2s infinite;
+  animation-delay: 0.3s;
+  transition-timing-function: cubic-bezier(.24,.96,1,1);
+}
+.three  {
+  animation: moveThree 2s infinite;
+  animation-delay: 0.4s;
+  transition-timing-function: cubic-bezier(.24,.96,1,1);
+}
+.four   {
+    animation: moveFour 2s infinite;
+    animation-delay: 0.5s;
+    transition-timing-function: cubic-bezier(.24,.96,1,1);
+  }
+.five {
+  animation: moveFive 2s infinite;
+  animation-delay: 0.6s;
+  transition-timing-function: cubic-bezier(.24,.96,1,1);
+
+}
+.six {
+  animation: moveSix 2s infinite;
+  animation-delay: 0.7s;
+  transition-timing-function: cubic-bezier(.24,.96,1,1);
+
+}
+.seven {
+  animation: moveSeven 2s infinite;
+  animation-delay: 0.8s;
+  transition-timing-function: cubic-bezier(.24,.96,1,1);
+
+}
+.eight {
+  animation: moveEight 2s infinite;
+  animation-delay: 0.9s;
+  transition-timing-function: cubic-bezier(.24,.96,1,1);
+}
+.big {
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  animation: moveBig 3s infinite;
+  transition-timing-function:cubic-bezier(.22,1,.65,1);
+
+}
+
+@keyframes moveOne {
+  50% {
+  transform: translate(-60px,-60px);
+  }
+}
+@keyframes moveTwo {
+  50% {
+  transform: translate(0,-60px) ;
+  }
+}
+@keyframes moveThree {
+  50% {
+    transform: translate(60px, -60px);
+  }
+}
+@keyframes moveFour {
+  50% {
+    transform: translate(60px, 0);
+  }
+}
+@keyframes moveFive {
+  50% {
+    transform: translate(60px, 60px);
+  }
+}
+@keyframes moveSix {
+  50% {
+    transform: translate(0px, 60px);
+  }
+}
+@keyframes moveSeven {
+  50% {
+    transform: translate(-60px, 60px);
+  }
+}
+@keyframes moveEight {
+  50% {
+    transform: translate(-60px ,0)
+  }
+}
+@keyframes moveBig {
+   50% { -webkit-transform: scale(0.5);
+}
