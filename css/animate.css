@@ -32,3 +32,14 @@
  color: black;
  background-position: left bottom;
 }
+
+.background-box-size:hover .box-board, .background-box-size:hover .box-board-two, .background-box-size:hover .box-board-three, .background-transparent-box:hover .box-in {
+  transform: scale(1.2);
+}
+.field h3:hover, input[type*='submit']:hover {
+  background-color: #179b77;
+}
+input:hover, input:active, textarea:hover, textarea:active {
+  border-color: #179b77;
+  }
+}

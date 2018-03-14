@@ -14,12 +14,12 @@
   color: black;
   font-weight: 800;
 }
+
 /*  ========================================================================*/
 
 .logo {
   display: inline-block;
 }
-
 
 .navbar  {
   float: right;
@@ -68,6 +68,9 @@
   margin-top: 0;
 }
 
+.about {
+  padding-bottom: 100px;
+}
 
 .about a {
   text-decoration: none;
@@ -88,22 +91,38 @@
     left: 0;
     right: 0;
 }
+.projects::after {
+  content: "";
+  display: block;
+  height: 150px;
+  background-color: #f4f4f2;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 24%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 24%, 0 100%);
+  position: relative;
+    bottom: -150px;
+    left: 0;
+    right: 0;
+}
+
 .projects {
   background-color: #f3f3f2;
   position: relative;
-  top: 150px;
+  top: 149px;
+}
+.projects .margin-bottom {
+  margin-bottom: 20px;
 }
 .background-box-size{
   height: 300px;
   width: 100%;
   overflow: hidden;
-
 }
-.background-box-size:hover .box-board
-{
-  transform: scale(1.2);
-
+.background-transparent-box {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
 }
+
 .box-board{
   height:100%;
   width: 100%;
@@ -111,20 +130,38 @@
   background-position: center;
   background-size: cover;
   transition: all .5s;
-
 }
-.box-board h3 {
+
+.box-board-two {
+  height:100%;
+  width: 100%;
+  background-image: url('../images/project2.jpeg');
+  background-position: center;
+  background-size: cover;
+  transition: all .5s;
+}
+.box-board-three {
+  height:100%;
+  width: 100%;
+  background-image: url('../images/project3.jpeg');
+  background-position: center;
+  background-size: cover;
+  transition: all .5s;
+}
+
+
+.box-board h3, .box-board-two h3, .box-board-three h3{
   margin-top: 0;
   padding-top: 70px;
   color: white;
 }
-.box-more h3 > p {
+.box-more h3 > p, .box-board-two h3 > p, .box-board-three h3 > p {
   margin-top:40px;
 }
-.box-board p {
+.box-board p, .box-board-two p, .box-board-three p {
   margin: auto;
 }
-.box-board a{
+.box-board a, .box-board-two a, .box-board-three a{
   text-decoration: none;
   color: white;
 }
@@ -142,10 +179,11 @@
   text-align: center;
 }
 .box-in {
-
-  height: 200px;
+  height: 100%;
+  width: 100%;
   background-color: #f4f4f3;
   margin-bottom: 20px;
+  transition: all .5s;
 }
 .box-shadow {
   box-shadow: 0px 20px 24px 0px rgba(230,230,230,1);
@@ -155,5 +193,87 @@
   padding-left: 0;
 }
 .box-in h3 {
-  padding-top: 50px;
+  margin-top: 65px;
+}
+.box-in p {
+  width: 80%;
+  margin: auto;
+}
+/*  SEKCJA KONTAKT*/
+.contact {
+  background-color: black;
+  background-image: url("../images/footer.jpg");
+  background-repeat: no-repeat;
+  padding-top: 180px;
+  background-positioN: center;
+  background-size: cover;
+}
+.field {
+  background-color:  rgba(19, 35, 47, 0.9);
+  margin: 170px auto;
+  padding: 0 20px 20px;
+}
+.field h3 {
+  background-color: #1ab188;
+  width: 50%;
+  margin: auto;
+  position: relative;
+  top: -25px;
+  height:50px;
+  line-height: 50px;
+  font-size: 24px;
+}
+input[type*='submit'] {
+  background-color: #1ab188;
+  border: none;
+  width: 30%;
+  margin-top: 20px;
+}
+
+
+
+label {
+  display: block;
+}
+
+textarea {
+  width: 100%;
+  background: transparent;
+  border: 1.5px solid rgb(160, 179, 176);
+  color: #a0b3b0;
+}
+.left, .right {
+  padding: 20px;
+}
+
+.field::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+label[for*="plec"]::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+input, select {
+  background: transparent;
+  border: 1.5px solid rgb(160, 179, 176);
+  padding: 10px;
+  margin: 10px;
+  color: #a0b3b0;
+}
+select {
+  border: none;
+}
+select option {
+  background-color: rgb(15, 31, 41);
+}
+
+label[for*="wiadomosc"] {
+  color: #a0b3b0;
+}
+::placeholder {
+  color: #a0b3b0;
+  padding-left: 20px;
 }

@@ -1,4 +1,11 @@
+
 @media (max-width: 767px) {
+  .col-md-offset-4 {
+      margin-left: 8.33%;
+    }
+  .col-xs-offset-1 {
+    margin-left: 8.333;
+  }
   .background {
     height: 400px;
     background-image: url("../images/cat-mobile.jpg");
@@ -55,15 +62,70 @@
     display: flex;
     align-items: center;
   }
+  .field h3 {
+    width: 80%;
+    font-size: 13px
+  }
+  .fieldset {
+    width: 100%;
+    float: none;
+  }
+  input {
+    width: 100%;
+    margin:0;
+    padding: 10px 0;
+  }
+  .float {
+    display: inline-block;
+    float: left;
+
+  }
+  .float:last-of-type {
+    padding-left: 30px;
+  }
+  label[for*="plec"] {
+    margin: 10px;
+    color: #a0b3b0;
+    display: inline-block;
+    float: left;
+    margin-left: 25%;
+  }
+
+
 /*  SEKCJA PROJEKTY*/
+}
+@media (min-width: 768px) {
+  fieldset {
+    width: 50%;
+    float: left;
+  }
+  .field h3 {
+    width: 80%;
+    font-size: 17px
+  }
+  .float {
+    display: block;
+  }
+  label[for*="plec"] {
+    color: #a0b3b0;
+    display: inline-block;
+    margin-left: 10px;
+  }
 
-
-
+  textarea {
+    height: 165px;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
+  .col-md-offset-4 {
+      margin-left: 8.33%;
+    }
   .background {
     height: 100vh;
-    background-image: url("../images/cat.jpg");
+    background-image: url("../images/cat-mobile.jpg");
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-size: cover;
   }
   .logo img {
     height: 50px;
@@ -75,17 +137,43 @@
   .navbar {
     line-height: 50px
   }
-  h2 {
-    font-size: 55px;
+  .margin-top {
+    margin-top: 100px;
   }
   .navbar li {
     font-size: 20px;
     padding: 0 5px 0;
   }
 
+  .funky-button {
+    margin-top: 75px;
+    height: 50px;
+    width: 230px;
+  }
+  .funky-button a {
+    font-size: 18px;
+  }
+
 }
 @media (min-width: 992px) {
+  .col-md-offset-4 {
+   margin-left: 29.17%
+ }
+  .background {
+    height: 100vh;
+    background-image: url("../images/cat.jpg");
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-size: cover;
+  }
   /*  Margin elementu row z nagłówkami*/
+  .logo img {
+    height: 50px;
+    width: 50px;
+  }
+  nav {
+    margin-top: 50px;
+  }
   .navbar li {
     font-size: 25px;
     padding: 0 20px 0;
@@ -96,13 +184,20 @@
   h1 {
     font-size: 75px;
   }
-  h2 {
-    font-size: 55px;
+
+  .funky-button {
+    margin-top: 75px;
+    height: 50px;
+    width: 230px;
+  }
+  .funky-button a {
+    font-size: 18px;
   }
 
+
 }
-/* @media(min-width: 1200px) {
-  .navbar li {
+@media(min-width: 1200px) {
+  /* .navbar li {
     font-size: 25px;
     padding: 0 20px 0;
   }
@@ -114,5 +209,8 @@
   }
   h2 {
     font-size: 55px;
+  } */
+  .field {
+    padding: 0 70px 20px;
   }
-} */
+}
