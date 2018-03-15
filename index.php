@@ -39,26 +39,10 @@
     include('./inc/about.html');
     include('./inc/projects.html');
     include('./inc/contact.php');
+    include('./inc/modal.php');
     ?>
 
 
-    <?php
-    function check_form($imie, $nazwisko, $plec, $email, $telefon, $rodzaj, $wiadomosc) {
-
-    }
-      if (
-        isset($_POST['imie']), &&
-        isset($_POST['nazwisko']), &&
-        isset($_POST['plec']), &&
-        isset($_POST['email']), &&
-        isset($_POST['telefon']), &&
-        isset($_POST['temat']), &&
-        isset($_POST['wiadomosc'])
-      ) {
-
-      });
-    check_form($_POST['imie'], $_POST['nazwisko'], $_POST['plec'], $_POST['email'], $_POST['telefon'], $_POST['temat'], $_POST['wiadomosc'] );
-   ?>
 
 
   </body>

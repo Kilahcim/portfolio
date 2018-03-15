@@ -230,8 +230,6 @@ input[type*='submit'] {
   margin-top: 20px;
 }
 
-
-
 label {
   display: block;
 }
@@ -276,4 +274,51 @@ label[for*="wiadomosc"] {
 ::placeholder {
   color: #a0b3b0;
   padding-left: 20px;
+}
+/* MODAL */
+.mymodal {
+  background-color: #f4f4f2;
+  margin-top: 40%;
+}
+.mymodal #btn {
+  float: right;
+
+}
+.dane{
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+.modal-content {
+  padding: 10px;
+}
+.dane span {
+  color: #f44336;
+  float:right;
+  padding-left: 50px;
+}
+.dane textarea {
+  margin-top: 10px;
+  height: 130px;
+}
+.float-restart::after {
+  content: " ";
+  display: table;
+  clear: both;
+  color: black;
+
+}
+
+.modal-container {
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+    padding: 0;
 }

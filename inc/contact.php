@@ -1,11 +1,11 @@
-<section class="contact">
+<section class="contact" id="form">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-offset-2 col-xs-8 paddingrestart">
+      <div class="col-xs-offset-2 col-xs-8 col-lg-offset-3 col-lg-6 paddingrestart">
         <div class="field">
           <h3 class="funky-font text-center">ZOSTAŃMY  W KONTAKCIE</h3>
-          <fieldset>
-            <form action="index.php" method="post">
+          <form action="#form" method="post">
+            <fieldset>
               <label for='imie'>
                 <input type="text" name="imie" placeholder="imię"
                 <?php
@@ -85,8 +85,8 @@
               <div class="text-center">
                 <input class="funky-font" type="submit" name="submit" value="Prześlij">
               </div>
-              </fieldset>
-            </form>
+            </fieldset>
+          </form>
         </div>
       </div>
     </div>
