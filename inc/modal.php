@@ -1,5 +1,6 @@
 <?php
-  if (isset($_POST['submit']) && isset($_POST['imie']) && isset($_POST['nazwisko']) && isset($_POST['plec']) && isset($_POST['email']) && isset($_POST['telefon']) && isset($_POST['wiadomosc'])) {
+  include('./inc/walidacje.php');
+  if (isset($_POST['submit']) && isset($_POST['imie']) && isset($_POST['nazwisko']) && isset($_POST['email']) && isset($_POST['telefon']) && isset($_POST['wiadomosc'])) {
     ?>
   <div class="container-fluid modal-container">
     <div class="row">
@@ -12,32 +13,42 @@
               <p class="funky-font-black restart-float">
                 Imie: <span>
                   <?php
-                if (isset($_POST['imie'])) {
-                  echo $_POST['imie'];
+                if (isset($_POST['imie']) && text_validation($_POST['imie'])) {
+                  echo strip_tags($_POST['imie']);
+                } else {
+                  echo '<span class="hint">Pole imię powinno zaczynać się od <u>dużej litery</u> i zawierać jedynie ciag znaków składający się z liter</span>';
                 }
                 ?></span></br>
                 Nazwisko:  <span>
                 <?php
-                if (isset($_POST['nazwisko'])) {
-                  echo $_POST['nazwisko'];
+                if (isset($_POST['nazwisko']) && text_validation($_POST['nazwisko'])) {
+                  echo strip_tags($_POST['nazwisko']);
+                } else {
+                  echo '<span class="hint">Pole nazwisko powinno zaczynać się od <u>dużej litery</u> i zawierać jedynie ciag znaków składający się z liter</span>';
                 }
                 ?></span></br>
                 Płeć:<span>
                   <?php
                 if (isset($_POST['plec'])) {
-                  echo $_POST['plec'];
+                  echo strip_tags($_POST['plec']);
+                } else {
+                  echo '<span class="hint">Proszę zaznaczyć jedno z pól</span>';
                 }
                 ?></span></br>
                 E-mail <span>
-                  <?php
-                if (isset($_POST['email'])) {
-                  echo $_POST['email'];
-                }
+                <?php
+                  if(isset($_POST['email']) && mail_validation($_POST['email'])) {
+                    echo strip_tags($_POST['email']);
+                  } else {
+                    echo '<span class="hint"> wprowadzono niepoprawny adres email</span>';
+                  }
                 ?></span></br>
                 Telefon <span>
                   <?php
-                  if (isset($_POST['telefon'])) {
-                    echo $_POST['telefon'];
+                  if (isset($_POST['telefon']) && number_validation($_POST['telefon'])) {
+                    echo strip_tags($_POST['telefon']);
+                  } else {
+                    echo '<span class="hint">telefon powinien zaczynać się od prefiksu i zawierać tylko cyfry - 11</span>';
                   }
                   ?>
                 </span></br>
@@ -53,7 +64,7 @@
                }
                ?> </span>
                <br>
-               <textarea  name="wiadomosc"><?php if(isset($_POST['wiadomosc'])) { echo $_POST['wiadomosc'];}?></textarea>
+               <textarea  name="wiadomosc"><?php if(isset($_POST['wiadomosc'])){echo strip_tags($_POST['wiadomosc']); } else {echo 'Twoja wiadomość jest pusta bądź zawiera złośliwe znaki';}?></textarea>
              </p>
 
 
@@ -72,8 +83,8 @@
     </div>
   </div>
   <?php
-    unset($_POST['submit']);
-  } else {
+
+} else if(isset($_POST['submit']) && ( !isset($_POST['imie']) || (!text_validation($_POST['imie'])) || !isset($_POST['nazwisko']) || !isset($_POST['plec']) || !isset($_POST['email']) || !isset($_POST['telefon']) || !isset($_POST['wiadomosc']))){
     ?>
     <div class="container-fluid modal-container">
       <div class="row">
@@ -83,7 +94,15 @@
 
 
               <div class="dane">
-                <h3 class="funky-font-black text-center">Uzupełnij wszystkie pola, wprowadzając poprawne dane.</h2>
+                <h3 class="funky-font-black text-center">Uzupełnij wskazane pola, wprowadzając poprawne dane.</h2>
+                  <p class="funky-font-black restart-float">
+                    <?php
+                      if (!text_validation($_POST['imie'])){
+                        echo '<p> Popraw pole <span>"imie"</span></p>';
+                      }
+
+                     ?>
+                 </p>
               </div>
                <div class="row">
                  <div class="col-xs-12">
@@ -98,6 +117,7 @@
       </div>
     </div>
     <?php
+      unset($_POST['submit']);
   }
 
   ?>

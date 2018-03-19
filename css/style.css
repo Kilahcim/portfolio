@@ -14,17 +14,26 @@
   color: black;
   font-weight: 800;
 }
+/* section {
+  padding: 50px 0;
+}
+header {
+  padding-bottom: 100px;
+} */
+section {
+  position: relative;
+  margin-top: -150px;
+}
 
 /*  ========================================================================*/
+
 
 .logo {
   display: inline-block;
 }
-
 .navbar  {
   float: right;
   list-style: none;
-
 }
 .navbar li {
   display: inline-block;
@@ -51,63 +60,61 @@
 }
 /* NAGŁÓWEK DO TEGO MOMENTU */
 
-.about::before {
-  content: "";
-  display: block;
-  height: 150px;
-  background-color: white;
-  -webkit-clip-path: polygon(0 84%, 100% 0, 100% 100%, 0% 100%);
-  clip-path: polygon(0 84%, 100% 0, 100% 100%, 0% 100%);
-  position: relative;
-    top: -133px;
-    left: 0;
-    right: 0;
-}
+
 
 .about .paddingrestart > h2 {
   margin-top: 0;
-}
-
-.about {
-  padding-bottom: 100px;
 }
 
 .about a {
   text-decoration: none;
   display: inline-block;
 }
+.about .container-fluid {
+  padding-bottom: 150px;
+}
+.about .container-fluid .row{
+  padding-bottom: 40px;
+}
+.about::before {
+  content: '';
+  -webkit-clip-path: polygon(0 44%, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 44%, 100% 0, 100% 100%, 0 100%);
+  height: 150px;
+  position: relative;
+  top: 0;
+  background-color: white;
+  display: block;
+}
 
 /* SEKCJA PROJECTS */
-
-.projects::before {
-  content: "";
-  display: block;
+.about::after {
+  content: '';
+  -webkit-clip-path: polygon(0 44%, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 44%, 100% 0, 100% 100%, 0 100%);
   height: 150px;
-  background-color: #f3f3f2;
-  -webkit-clip-path: polygon(0 0, 100% 61%, 100% 100%, 0% 100%);
-  clip-path: polygon(0 0, 100% 61%, 100% 100%, 0% 100%);
   position: relative;
-    top: -150px;
-    left: 0;
-    right: 0;
+  top: -150px;
+  background-color: #f4f4f2;
+  display: block;
 }
 .projects::after {
-  content: "";
-  display: block;
+  content: '';
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 44%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 44%);
+  z-index: 500;
   height: 150px;
-  background-color: #f4f4f2;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 24%, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 24%, 0 100%);
   position: relative;
-    bottom: -150px;
-    left: 0;
-    right: 0;
+  bottom: 0;
+  background-color: #f4f4f2;;
+  display: block;
 }
 
 .projects {
   background-color: #f3f3f2;
-  position: relative;
-  top: 149px;
+}
+.projects .container-fluid {
+  padding-bottom: 20px;
 }
 .projects .margin-bottom {
   margin-bottom: 20px;
@@ -122,7 +129,6 @@
   width: 100%;
   overflow: hidden;
 }
-
 .box-board{
   height:100%;
   width: 100%;
@@ -131,7 +137,6 @@
   background-size: cover;
   transition: all .5s;
 }
-
 .box-board-two {
   height:100%;
   width: 100%;
@@ -148,8 +153,6 @@
   background-size: cover;
   transition: all .5s;
 }
-
-
 .box-board h3, .box-board-two h3, .box-board-three h3{
   margin-top: 0;
   padding-top: 70px;
@@ -208,6 +211,7 @@
   background-positioN: center;
   background-size: cover;
 }
+
 .field {
   background-color:  rgba(19, 35, 47, 0.9);
   margin: 170px auto;
@@ -279,6 +283,7 @@ label[for*="wiadomosc"] {
 .mymodal {
   background-color: #f4f4f2;
   margin-top: 40%;
+  border-radius: 10px;
 }
 .mymodal #btn {
   float: right;
@@ -297,6 +302,11 @@ label[for*="wiadomosc"] {
   float:right;
   padding-left: 50px;
 }
+.hint {
+  font-size: 10px;
+  float: left;
+
+}
 .dane textarea {
   margin-top: 10px;
   height: 130px;
@@ -310,15 +320,16 @@ label[for*="wiadomosc"] {
 }
 
 .modal-container {
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
-    padding: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+  padding: 0;
 }
+/* ##################################### POPRAKWI ############################## */

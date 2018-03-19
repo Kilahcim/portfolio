@@ -15,16 +15,20 @@ $(function(){
     })
   });
 
+  $('.popup').mouseenter('click', function() {
+
+  $('#myPopup').addClass("show");
+  });
+  $('.popup').mouseleave('click', function() {
+
+  $('#myPopup').removeClass("show");
+  });
+  // console.log(popup);
 
 
 
 });
-//
-//
-//
-//
-// window.onclick = function(event) {
-//     if (event.target == modal) {
-//
-//     }
-// }
+function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}

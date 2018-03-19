@@ -1,4 +1,6 @@
+@media (max-width: 550px){
 
+}
 @media (max-width: 767px) {
   .col-md-offset-4 {
       margin-left: 8.33%;
@@ -11,7 +13,7 @@
     background-image: url("../images/cat-mobile.jpg");
     background-position: 0 -250px;
     background-attachment: fixed;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-size: cover;
   }
   .logo img {
@@ -47,10 +49,6 @@
     font-size: 12px;
   }
 /* SEKCJA ABOUTE ################################ */
-  .about .container-fluid {
-    position: relative;
-    top: -120px;
-  }
   .about span {
     font-size: 10px;
   }
@@ -58,10 +56,10 @@
     font-size: 12px;
     font-weight: 400;
   }
-  .about .container-fluid > .row {
+  /* .about .container-fluid > .row {
     display: flex;
     align-items: center;
-  }
+  } */
   .field h3 {
     width: 80%;
     font-size: 13px
@@ -88,7 +86,7 @@
     color: #a0b3b0;
     display: inline-block;
     float: left;
-    margin-left: 25%;
+
   }
 
 

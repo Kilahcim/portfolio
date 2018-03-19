@@ -1,7 +1,7 @@
 <section class="contact" id="form">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-offset-2 col-xs-8 col-lg-offset-3 col-lg-6 paddingrestart">
+      <div class="col-xs-offset-1 col-xs-10 col-lg-offset-3 col-lg-6 paddingrestart">
         <div class="field">
           <h3 class="funky-font text-center">ZOSTAŃMY  W KONTAKCIE</h3>
           <form action="#form" method="post">
@@ -87,6 +87,15 @@
               </div>
             </fieldset>
           </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-offset-2 col-xs-8">
+        <div class="text-center">
+          <p class="funky-font"> Copyright 2018 | Krzysztof Michalik</p>
         </div>
       </div>
     </div>

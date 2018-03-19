@@ -40,7 +40,9 @@
     include('./inc/projects.html');
     include('./inc/contact.php');
     include('./inc/modal.php');
+
     ?>
+
 
 
 
